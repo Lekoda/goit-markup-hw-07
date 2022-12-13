@@ -19,6 +19,18 @@ textarea {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+
+    & input {
+            padding-top: 11px;
+            padding-bottom: 11px;
+            padding-left: 42px;
+            padding-right: 12px;
+    
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            cursor: pointer;
+            outline: transparent;
+        }
 }
 
 .form-label {
@@ -33,27 +45,17 @@ textarea {
     color: var(--text-lightgrey-color);
 }
 
-.form-field input {
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 42px;
-    padding-right: 12px;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    cursor: pointer;
-    outline: transparent;
-}
 
 .modal-input {
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+            border-color: var(--accent);
+}
 }
 
-.modal-input:focus {
-    border-color: var(--accent);
-}
 
 .form-textarea {
     min-height: 120px;
@@ -69,21 +71,21 @@ textarea {
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &::placeholder {
+            font-family: inherit;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.1666;
+            letter-spacing: 0.01em;
+    
+            color: rgba(117, 117, 117, 0.5);
+        }
+    
+    &:focus {
+            border-color: var(--accent);
+        }
 }
 
-.form-textarea::placeholder {
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.1666;
-    letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
-}
-
-.form-textarea:focus {
-    border-color: var(--accent);
-}
 
 .form-submit {
     display: flex;

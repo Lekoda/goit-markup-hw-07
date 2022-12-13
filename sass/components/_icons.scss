@@ -41,12 +41,13 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+            fill: var(--accent);
+        }
 }
 
-.close-btn-icon:hover,
-.close-btn-icon:focus {
-    fill: var(--accent);
-}
+
 
 // form 
 .modal-icon {
@@ -57,8 +58,8 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-input:focus+.modal-icon {
-    fill: var(--accent);
+    .modal-input:focus+& {
+            fill: var(--accent);
+        }
 }
